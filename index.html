@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>One Page Strona</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Nawigacja -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">MojaStrona</div>
+      <ul class="nav-links">
+        <li><a href="#hero">Start</a></li>
+        <li><a href="#about">O mnie</a></li>
+        <li><a href="#services">Usługi</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#testimonials">Opinie</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="section hero">
+    <div class="content" data-aos="fade-up">
+      <h1>Witamy na naszej stronie</h1>
+      <p>Tworzymy piękne i nowoczesne strony internetowe</p>
+      <a href="#about" class="btn">Dowiedz się więcej</a>
+    </div>
+  </section>
+
+  <!-- O mnie -->
+  <section id="about" class="section about" data-aos="fade-right">
+    <h2>O nas</h2>
+    <p>Jesteśmy zespołem pasjonatów, którzy kochają tworzyć nowoczesne rozwiązania webowe.</p>
+  </section>
+
+  <!-- Usługi -->
+  <section id="services" class="section services" data-aos="fade-left">
+    <h2>Nasze usługi</h2>
+    <div class="service-cards">
+      <div class="card"><i class="fas fa-laptop-code"></i><h3>Web Development</h3></div>
+      <div class="card"><i class="fas fa-mobile-alt"></i><h3>Responsive Design</h3></div>
+      <div class="card"><i class="fas fa-search"></i><h3>SEO</h3></div>
+    </div>
+  </section>
+  <!-- Portfolio -->
+  <section id="portfolio" class="section portfolio" data-aos="zoom-in">
+    <h2>Nasze projekty</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item"><img src="https://via.placeholder.com/300x200" alt="Projekt 1" /><p>Projekt 1</p></div>
+      <div class="portfolio-item"><img src="https://via.placeholder.com/300x200" alt="Projekt 2" /><p>Projekt 2</p></div>
+      <div class="portfolio-item"><img src="https://via.placeholder.com/300x200" alt="Projekt 3" /><p>Projekt 3</p></div>
+    </div>
+  </section>
+
+  <!-- Opinie -->
+  <section id="testimonials" class="section testimonials" data-aos="fade-up">
+    <h2>Co mówią klienci</h2>
+    <div class="testimonial-slider">
+      <blockquote>
+        <p>"Świetna współpraca i efekt końcowy lepszy niż się spodziewałem!"</p>
+        <cite>— Anna, CEO Startup</cite>
+      </blockquote>
+      <blockquote>
+        <p>"Profesjonalizm, terminowość i piękny design. Polecam!"</p>
+        <cite>— Tomasz, Freelancer</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Kontakt -->
+  <section id="contact" class="section contact" data-aos="fade-right">
+    <h2>Kontakt</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Twoje imię" required />
+      <input type="email" placeholder="Twój e-mail" required />
+      <textarea placeholder="Wiadomość" required></textarea>
+      <button type="submit" class="btn">Wyślij</button>
+    </form>
+  </section>
+
+  <!-- Stopka -->
+  <footer>
+    <p>&copy; 2025 MojaStrona. Wszelkie prawa zastrzeżone.</p>
+    <div class="socials">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </footer>
+
+  <!-- Skrypty -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    // Smooth scroll
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
